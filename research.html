@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Huseyin Aydin - Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/me.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Hüseyin Aydın</a></h1>
+					<p>Teaching & Research Assistant<br>METU, CEng</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="resume.html">Resume</a></li>
+						<li><a href="#" class="active">Research Area</a></li>
+						<li><a href="teaching.html">Teaching</a></li>
+						<li><a href="interests.html">Personal Interests</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<span class="icon fa-envelope contacts"> huseyin[at]ceng.metu.edu.tr<br></span>
+					<span class="icon fa-phone contacts"> +90 (312) 210-5541</span>
+					<ul class="icons">
+						<li><a target="_blank" href="https://www.linkedin.com/in/huseyinaydinmetu" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a target="_blank" href="https://twitter.com/fasollaaa" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a target="_blank" href="https://github.com/huseyinaydinmetu" class="icon fa-github"><span class="label">Github</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+							<section id="material" style="padding-top:5%;">
+								<div class="container">
+									<h2> Research Focus </h2>
+									<p> My main research is focused on the improvement of a Reinforcement Learning (RL) by a convenient decomposition of the problem. In its easiest case, we assume that the RL agent has complete information about its state. In other words, the problem becomes fully observable by the agent. Subgoal Identification is useful for the agent which tries to learn the fully observable environment to decompose and achieve some tasks efficiently.</p>
+									<p>The difference between classical Q Learning and Macro-Q Learning with dynamic subgoal identification is obvious in the two animations below, prepared by <a target="_blank" href="https://people.ieu.edu.tr/en/alperdemir/" style="text-decoration:none;">Alper Demir</a>.</p>
+									<p> You can see the classical 2 rooms with 1 door grid domain in the following figure. The agent starts each episode in a random cell in the left room and tries to reach the bottom right corner of the right room. </p>
+									<img src="images/2rooms10x10_1door.png" class="research-image">
+									<p> For Q Learning without subgoal identification this is the trace of agent history for 100th episode in this domain: </p>
+										<img src="images/q_0x99.rlhist.gif" class="research-image">
+										<p> When the agent detects a subgoal close to the doorway (the cell colored with white) in this domain like the figure below: </p>
+										<img src="images/room_maze_2rooms_rlasi_loroots.png" class="research-image">
+										<p> Then the agent generates an option to reach that state and the trace of agent history for 100th episode in this domain becomes more goal oriented as can be seen in the animation below: </p>
+										<img src="images/loroots_0x99.rlhist.gif" class="research-image">
+										<p> The efficency in learning which agent gains with the dynamic identification of subgoal is significant.</p>
+                                        <p> When the agent is not able to completely perceive its current status, then the problem becomes partially observable for the agent. For example, under partial observability, the agent cannot sense its exact location in the domain above. It can only get a clue to its whereabout which can make the problem and its decomposition severely challenging. What the agent needs at this point is an external memory or a special set of observations that it can rely.</p>
+                                        <img src="images/l6rooms_w_monuments.jpg" class="research-image2">
+                                        <p>In the 6 rooms domain above, the task is going from the location indicated by the letter S to the location indicated by letter G. The doors are assumed to yield unique observations as landmarks in this domain. Therefore, they can be useful in the decomposition of the problem which can be very ambiguous as a whole.</p>
+								</div>
+							</section>
+
+
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; 2022 Hüseyin Aydin</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
